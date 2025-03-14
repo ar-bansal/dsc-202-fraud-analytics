@@ -3,6 +3,8 @@ Fraud analytics for detecting potentially fraudulent merchants based on transact
 
 
 ## Instructions to run  
+0. Pull the repo. Then, create a directory called `neo4j-import` in the repo. Download the file at https://drive.google.com/file/d/1QTV4HHBi33-SmUyHvf1XdAslJGWOVzHz/view, and place it in `neo4j-import`.  
+
 1. Create and setup environment  
 ```
 conda create --name dsc-202 python=3.10.16
