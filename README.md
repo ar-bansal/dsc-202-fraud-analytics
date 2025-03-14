@@ -3,7 +3,7 @@ Fraud analytics for detecting potentially fraudulent merchants based on transact
 
 
 ## Instructions to run  
-0. Pull the repo. Then, create a directory called `neo4j-import` in the repo. Download the file at https://drive.google.com/file/d/1QTV4HHBi33-SmUyHvf1XdAslJGWOVzHz/view, and place it in `neo4j-import`.  
+0. Pull the repo. 
 
 1. Create and setup environment  
 ```
@@ -18,7 +18,7 @@ docker run --name neo4j-with-plugins -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=neo
 ```
 
 3. Run python notebook  
-Once neo4j has been set up and is running, run the `neo4j-data-ingestion.ipynb` to ingest the `neo4j-import/fraudTestfinal.csv` file into the database. To limit the number of rows that are ingested, add `LIMIT 10` after the `WITH ROW` line in the query. 
+Once neo4j has been set up and is running, run the `neo4j-data-ingestion.ipynb` to ingest the `neo4j-import/fraudTestSample.csv` file into the database. To limit the number of rows that are ingested, add `LIMIT 10` after the `WITH ROW` line in the query. 
 
 
 ## Resetting neo4j  
