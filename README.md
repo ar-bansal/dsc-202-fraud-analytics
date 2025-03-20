@@ -1,6 +1,12 @@
 # dsc-202-fraud-analytics
 Fraud analytics for detecting potentially fraudulent merchants based on transaction patterns. 
 
+# Team Members
+1. Tarun Kumar Gupta (A69033596)
+2. Aryan Bansal
+3. Jude Mariadas
+4. David Lurie
+
 
 ## Instructions to run  
 0. Pull the repo. 
