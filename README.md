@@ -4,8 +4,8 @@ Fraud analytics for detecting potentially fraudulent merchants based on transact
 # Team Members
 1. Tarun Kumar Gupta (A69033596)
 2. Aryan Bansal
-3. Jude Mariadas
-4. David Lurie
+3. Jude Mariadas (A18105200)
+4. David Lurie (A69034603)
 
 
 ## Instructions to run  
