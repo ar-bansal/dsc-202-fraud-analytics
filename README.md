@@ -24,7 +24,7 @@ docker run --name neo4j-with-plugins^ -p 7474:7474 -p 7687:7687^ -e NEO4J_AUTH=n
 ```
 
 3. Run python notebook  
-Once neo4j has been set up and is running, run the `neo4j-data-ingestion.ipynb` to ingest the `neo4j-import/fraudTestSample.csv` file into the database. To limit the number of rows that are ingested, add `LIMIT 10` after the `WITH ROW` line in the query. 
+Once neo4j has been set up and is running, run the `neo4j-data-ingestion.ipynb` to ingest the `neo4j-import/fraudTestSample.csv` file into the database and then to run the further neo4j queries in the notebook. To limit the number of rows that are ingested, add `LIMIT 10` after the `WITH ROW` line in the query. 
 
 
 ## Resetting neo4j  
