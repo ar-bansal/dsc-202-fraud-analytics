@@ -18,7 +18,7 @@ conda activate dsc-202
 pip install -r requirements.txt
 ```  
 
-2. Launch neo4j
+2. Launch neo4j (Command Prompt)
 ```
 docker run --name neo4j-with-plugins^ -p 7474:7474 -p 7687:7687^ -e NEO4J_AUTH=neo4j/password^ -e NEO4JLABS_PLUGINS="[\"apoc\", \"graph-data-science\"]"^ -e NEO4J_dbms_security_procedures_unrestricted="apoc.*,gds.*"^ -e NEO4J_dbms_security_procedures_allowlist="apoc.*,gds.*"^ -v "%cd%/neo4j-import:/import"^ -v neo4j_data:/data^ neo4j:latest
 ```
