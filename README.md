@@ -3,8 +3,8 @@ Fraud analytics for detecting potentially fraudulent merchants based on transact
 
 # Team Members
 1. Tarun Kumar Gupta (A69033596)
-2. Aryan Bansal
-3. Jude Mariadas
+2. Aryan Bansal 
+3. Jude Mariadas (A18105200)
 4. David Lurie
 
 
@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 2. Launch neo4j
 ```
-docker run --name neo4j-with-plugins^ -p 7474:7474 -p 7687:7687^ -e NEO4J_AUTH=neo4j/password^ -e NEO4JLABS_PLUGINS="[\"apoc\", \"graph-data-science\"]"^ -e NEO4J_dbms_security_procedures_unrestricted="apoc.*,gds.*"^ -e NEO4J_dbms_security_procedures_allowlist="apoc.*,gds.*"^ -v "%cd%/neo4j-import:/import"^ -v neo4j_data:/data^ neo4j:latest
+docker run --name neo4j-with-plugins -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=neo4j/password -e NEO4JLABS_PLUGINS='["apoc", "graph-data-science"]' -e NEO4J_dbms_security_procedures_unrestricted='apoc.*,gds.*' -e NEO4J_dbms_security_procedures_allowlist='apoc.*,gds.*' -v $(pwd)/neo4j-import:/import -v neo4j_data:/data neo4j:latest
 ```
 
 3. Run python notebook  
