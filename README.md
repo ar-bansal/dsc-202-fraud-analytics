@@ -29,7 +29,7 @@ docker run --name postgres -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=mypasswo
 ```
 
 3. Run python notebook  
-Once neo4j has been set up and is running, run the `neo4j-data-ingestion.ipynb` to ingest the `neo4j-import/fraudTestSample.csv` file into the Neo4j. To limit the number of rows that are ingested, add `LIMIT 10` after the `WITH ROW` line in the query. 
+Once neo4j has been set up and is running, run the `neo4j-data-ingestion+analysis.ipynb` to ingest the `neo4j-import/fraudTestSample.csv` file into the Neo4j and for doing further analysis with Neo4j. To limit the number of rows that are ingested, add `LIMIT 10` after the `WITH ROW` line in the query. 
 
 After setting up the postgres container, run the `postgres-data-ingestion.ipynb` notebook to ingest the `postgres-import/fraudTestSample.csv` file into Postgres.
 
