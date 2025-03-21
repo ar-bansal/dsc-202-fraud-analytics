@@ -18,14 +18,20 @@ conda activate dsc-202
 pip install -r requirements.txt
 ```  
 
-2. Launch neo4j (Command Prompt)
+2. Launch Neo4j and Postgres containers (Command Prompt)
 ```
+docker pull neo4j 
+docker pull postgres
+
 docker run --name neo4j-with-plugins^ -p 7474:7474 -p 7687:7687^ -e NEO4J_AUTH=neo4j/password^ -e NEO4JLABS_PLUGINS="[\"apoc\", \"graph-data-science\"]"^ -e NEO4J_dbms_security_procedures_unrestricted="apoc.*,gds.*"^ -e NEO4J_dbms_security_procedures_allowlist="apoc.*,gds.*"^ -v "%cd%/neo4j-import:/import"^ -v neo4j_data:/data^ neo4j:latest
+
+docker run --name postgres -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=mypassword -e POSTGRES_DATABASE=mydatabase -p 5432:5432 -d postgres:latest
 ```
 
 3. Run python notebook  
-Once neo4j has been set up and is running, run the `neo4j-data-ingestion.ipynb` to ingest the `neo4j-import/fraudTestSample.csv` file into the database and then to run the further neo4j queries in the notebook. To limit the number of rows that are ingested, add `LIMIT 10` after the `WITH ROW` line in the query. 
+Once neo4j has been set up and is running, run the `neo4j-data-ingestion.ipynb` to ingest the `neo4j-import/fraudTestSample.csv` file into the Neo4j. To limit the number of rows that are ingested, add `LIMIT 10` after the `WITH ROW` line in the query. 
 
+After setting up the postgres container, run the `postgres-data-ingestion.ipynb` notebook to ingest the `postgres-import/fraudTestSample.csv` file into Postgres.
 
 ## Resetting neo4j  
 Just stopping and removing the neo4j container will not be enough. The data volume needs to be removed as well. Run the following commands to completely delete the container and saved data. 
