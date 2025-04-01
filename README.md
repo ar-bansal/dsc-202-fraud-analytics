@@ -33,10 +33,12 @@ Once neo4j has been set up and is running, run the `neo4j-data-ingestion+analysi
 
 After setting up the postgres container, run the `postgres-data-ingestion.ipynb` notebook to ingest the `postgres-import/fraudTestSample.csv` file into Postgres.
 
-## Resetting neo4j  
-Just stopping and removing the neo4j container will not be enough. The data volume needs to be removed as well. Run the following commands to completely delete the container and saved data. 
+## Data Reset Procedure for Neo4j  
+To properly reset the Neo4j environment, both the container and its associated data volume must be removed. The container shutdown alone is insufficient for a complete reset. Execute the following commands to ensure proper removal of both the container instance and all persistent data:
 ```
 docker stop neo4j-with-plugins
 docker rm neo4j-with-plugins
 docker volume rm neo4j_data
 ```
+This sequence ensures complete elimination of all Neo4j-related resources, allowing for a clean reinstallation if required.
+
